@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Vuetify from 'vuetify/lib'
+// import Vuetify from 'vuetify/lib'
 
-Vue.use(Vuetify)
+// Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 
 new Vue({
-  vuetify,
+  // vuetify,
   router,
   render: h => h(App)
 }).$mount('#app')
