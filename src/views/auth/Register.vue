@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    <h1>This is a test page</h1>
-  </div>
+	<v-app class="pink lighten-4">
+		<h1>Register</h1>
+	</v-app>
 </template>
