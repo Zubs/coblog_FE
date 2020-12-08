@@ -34,6 +34,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "login" */ '../views/auth/Register.vue')
   },
   {
+    path: '/forgot-password',
+    name: 'Forgot Password',
+    component: () => import(/* webpackChunkName: "login" */ '../views/auth/forgot-password.vue')
+  },
+  {
     path: '*',
     name: 'ErrorPage',
     component: ErrorPage

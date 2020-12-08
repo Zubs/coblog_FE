@@ -7,7 +7,7 @@
 					<v-row justify="center">
 						<v-col cols="12" md="10">
 							<v-card class="text-center my-5 py-5 px-5">
-								<h1 class="blue--text">Login</h1>
+								<h1 class="blue--text">Forgot Password</h1>
 								<v-form class="mx-5 my-5" ref="form">
 									<v-text-field
 										required
@@ -17,17 +17,7 @@
 										autofocus
 										:rules="emailRules"
 									></v-text-field>
-									<v-text-field
-										required
-										label="Password"
-										prepend-icon="mdi-lock"
-										:append-icon="showP ? 'mdi-eye' : 'mdi-eye-off'"
-										@click:append="showP = !showP"
-										:type="showP ? 'text' : 'password'"
-										v-model="password"
-										:rules="passwordRules"
-									></v-text-field>
-									<v-btn color="blue" dark block @click="Submit">Login</v-btn>
+									<v-btn color="blue" dark block @click="Submit">Get Token</v-btn>
 								</v-form>
 							</v-card>
 						</v-col>
@@ -42,17 +32,10 @@
 	export default {
 		data () {
 			return {
-				showP: false,
 				email: "",
-				password: "",
 				emailRules: [
 					v => !!v || 'Please Enter Email',
 					v => /.+@.+/.test(v) || 'E-mail must be valid',
-				],
-				passwordRules: [
-					v => !!v || 'Please Provide Password',
-					v => v.length >= 8 || 'Password Must Be At Least 8 Characters',
-					v => v.length <= 20 || 'Password Must Be Less than 21 Characters',
 				]
 			}
 		},
